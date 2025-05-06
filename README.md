@@ -79,6 +79,8 @@ The service will be available at `http://localhost:8000`
 
 ### PDF OCR Service
 
+After running the PDF OCR service successfully, the extracted text will be saved inside the `ocr_output` folder as a `.txt` file. You can view the results there.
+
 To start the PDF OCR service:
 ```bash
 cd pdf-ocr
