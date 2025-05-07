@@ -98,3 +98,6 @@ async function fixSpecializedOCR(
     return text;
   }
 }
+
+
+export default fixSpecializedOCR;

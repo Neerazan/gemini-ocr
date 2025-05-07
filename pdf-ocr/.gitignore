@@ -54,3 +54,6 @@ temp/
 
 # OS generated files
 Thumbs.db
+
+# other files and folders
+/ocr_output

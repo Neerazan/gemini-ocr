@@ -119,7 +119,7 @@ function getPostProcessingPrompt(options: PostProcessingOptions, rawText: string
 
 function getInitialTextExtractionPrompt(documentType: string) {
   let prompt = `
-    You are an OCR engine specialized in extracting **plain text** from images of documents.
+    You are an OCR engine specialized in extracting **plain text in the format of docs (docx) ** from images of documents.
     Your goal is to output the **exact textual content** as faithfully as possible, including:
       - All words and numbers
       - Line breaks and paragraph separations

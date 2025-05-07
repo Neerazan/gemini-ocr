@@ -1,17 +1,17 @@
 import 'dotenv/config';
 import extractPlainText from './ai/extract_plain_text.ts';
 import fixOCRIssues from './ai/fix_issues.ts';
-import fixMathSymbols from './ai/fix_math_symbols.ts';
+import fixSpecializedOCR from './ai/fix_specialized_issues.ts';
 
 
 const ocrOptions = {
   usePreprocessing: true,
-  preset: "handwriting",
+  preset: "auto",
   saveIntermediateFiles: true,
   outputPath: "./ocr_output"
 };
 
-const imagePath = "/home/chlorine/Pictures/note_1.png";
+const imagePath = "/home/chlorine/Pictures/note_3.png";
 
 
 async function main() {
@@ -23,10 +23,6 @@ async function main() {
       // First fix general OCR issues
       const fixedText = await fixOCRIssues(rawText, ['all']);
       console.log(`Fixed text length: ${fixedText.length} characters`);
-
-      // Then fix mathematical symbols
-      const mathFixedText = await fixMathSymbols(fixedText);
-      console.log(`Math symbols fixed text length: ${mathFixedText.length} characters`);
     }
   } catch (error) {
     console.error('Error running OCR:', error);
